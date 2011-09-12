@@ -100,8 +100,8 @@ def run(command, data=None, timeout=None):
     for c in command:
 
         if len(history):
-            # due to broken pipe problems pass only first 10MB
-            data = history[-1].std_out[0:10*1024]
+            # due to broken pipe problems pass only first 20MB
+            data = history[-1].std_out[0:20*1024]
         
 
         cmd = Command(c)
